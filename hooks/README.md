@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+useEffect 
+-> Removes side effects inside component(This is mostly we from states)
+->Revoves side effects update component(This mostly we get from props)
+Use to fetch data
+Can be used as life cycle methods
+Can be used for DOM manipulation
+We can say useEffect is used to prevent extra rendering of component on state.
+Note - When in a component we change state whole component gets re-rendered. So, the function that we want to call only once, but it is getting called every time whenever state is changing because component is getting re-rendered. To prevent this we can use useEffect.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+useRef
+->It is used with input fields. Whenever we use useRef with input field, then we can contol that input field with the help of useRef. In other words, input field reference will come under useRef. Now if we have used useRef with input field then we can do whatever we want like change of style, focus etc.
+->useRef is used to control input field or any html element.
 
-In the project directory, you can run:
 
-### `npm start`
+useReducer
+->It is better alternate of useState Hook.
+->Like in useState, we can store values of object, array, variable or input field etc. In same way we can do all these things in useReducer. But we should use useReducer in some specific scenarios, not with everycase everywhere.
+->useReducer is expensive object, so it takes time to compile.
+->In small forms, we can use use useState and it is good. But suppose if we have long form which have 10 or 15 fields, then don't use useState Hook because there for every state we will be require to declare many states. So in that case we should go for useReducer Hook.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+useContext 
+-> This work same as Redux for state management.
+->Difference between Redux and useContext
+1. Redux is external library that we need to install it separately in react.js projects.
+React Context API is inbuilt. No need of installing it separately.
+2. If we apply redux then it will be applied to whole project. If we have 200 components then all will come under redux.
+But in Context API, it is not necessary keep all project components under Context API. We can take any number of components as required in application.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+useMemo
+-> We always work with states and props, then our component unwantedly gets updated with same values, Even though it is not required. So in case of that we should use useMemo.
 
-### `npm run build`
+useEffect vs useMemo
+useEffect is used as an life cycle method. It means when your component gets created()mount or anything gets updated in it or when component gets unmounted. In every case useEffect is used.
+It is also used to reduce unwanted rendering. It is used reduce whole component rendering.
+But useMemo is used to reduce specific part of component. 
+This is the major difference between them.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

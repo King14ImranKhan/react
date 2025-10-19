@@ -3,7 +3,9 @@ import { useState } from "react";
 
 export function UseStateComponent() {
     const [count, setCount] = useState(0);
-    console.log("UseStateComponent rendered");
+    // Components get re-render as state changes
+    console.log("UseStateComponent rendered"); 
+ 
 
     return (
         <div>

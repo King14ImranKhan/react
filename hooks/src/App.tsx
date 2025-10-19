@@ -12,6 +12,11 @@ function App() {
   const goToUseContext = () => navigate('/use-context');
   const goToUseReducer = () => navigate('/use-reducer');
   const goToUseCallback = () => navigate('/use-callback');
+  const goToPopUp = () => navigate('/pop-up');
+  const goToProps = () => navigate('/props');
+  const goToModal = () => navigate('/modal');
+  const goToMethods = () => navigate('/map-filter-for-each-reduce');
+  const goToMemo = () => navigate('/use-memo');
 
   return (
     <>
@@ -33,6 +38,21 @@ function App() {
         </button>
         <button onClick={goToUseCallback} style={{ margin: 10 }}>
           Use Callback
+        </button>
+        <button onClick={goToPopUp} style={{ margin: 10 }}>
+          Pop Up
+        </button>
+        <button onClick={goToProps} style={{ margin: 10 }}>
+          Props
+        </button>
+        <button onClick={goToModal} style={{ margin: 10 }}>
+          Modal
+        </button>
+        <button onClick={goToMethods} style={{ margin: 10 }}>
+          Methods
+        </button>
+        <button onClick={goToMemo} style={{ margin: 10 }}>
+          Memo
         </button>
       </nav>
 
